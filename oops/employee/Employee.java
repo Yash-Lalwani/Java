@@ -1,7 +1,5 @@
 package employee;
 
-import java.util.*;
-
 class Employee {
     private int salary; // to store the salary of employee
     
