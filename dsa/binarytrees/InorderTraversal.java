@@ -1,4 +1,4 @@
-public class PreorderTraversal {
+public class InorderTraversal {
     static class Node {
         int data;
         Node left;
@@ -36,12 +36,22 @@ public class PreorderTraversal {
             preorder(root.left);
             preorder(root.right);
         }
+
+        // Time complexity for inorder traversal linear = O(n)
+        public static void inorder(Node root) {
+            if (root == null) {
+                return;
+            }
+            inorder(root.left);
+            System.out.print(root.data + " ");
+            inorder(root.right);
+        }
     }
     public static void main(String[] args) {
         int nodes[] = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
         BinaryTrees tree = new BinaryTrees();
         Node root = tree.buildTree(nodes);
 
-        tree.preorder(root);
+        tree.inorder(root);
     }
 }
