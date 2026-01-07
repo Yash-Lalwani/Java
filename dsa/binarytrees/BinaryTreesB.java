@@ -1,3 +1,4 @@
+// Time Complexity is O(n)
 public class BinaryTreesB {
     static class Node {
         int data;
@@ -19,7 +20,7 @@ public class BinaryTreesB {
             if (nodes[idx] == -1) {
                 return null;
             }
-            
+
             Node newNode = new Node(nodes[idx]);
             newNode.left = buildTree(nodes);
             newNode.right = buildTree(nodes);
