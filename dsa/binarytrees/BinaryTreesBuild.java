@@ -1,5 +1,5 @@
 // Time Complexity is O(n)
-public class BinaryTreesB {
+public class BinaryTreesBuild {
     static class Node {
         int data;
         Node left;
