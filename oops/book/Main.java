@@ -1,6 +1,4 @@
 package book;
-
-import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -8,8 +6,6 @@ public class Main {
 
     public static void main(String[] args) {
     
-        Scanner sc = new Scanner(System.in);
-
         List<String> titles = new ArrayList<>();
         List<String> authors = new ArrayList<>();
         List<Boolean> isAvailable = new ArrayList<>();
@@ -39,9 +35,5 @@ public class Main {
                 book.getAvailability(bookName);
             }
         }
-
-        System.out.print("Enter number of books: ");
-        sc.nextInt();
-        sc.close();
     }
 }
