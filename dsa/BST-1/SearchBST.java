@@ -1,4 +1,4 @@
-public class BuildBST {
+public class SearchBST {
     static class Node {
         int data;
         Node left;
@@ -38,6 +38,23 @@ public class BuildBST {
 
     }
 
+    public static boolean search(Node root, int key) {
+        if(root == null) {
+            return false;
+        }
+
+        if(root.data == key) {
+            return true;
+        }
+
+        if(root.data > key) {
+            return search(root.left, key);
+        }
+        else {
+            return search(root.right, key);
+        }
+     }
+
     public static void main(String[] args) {
         int values[] = {5, 1, 3, 4, 2, 7};
         Node root = null;
@@ -49,6 +66,13 @@ public class BuildBST {
         // To verify if the correct BST is formed, we will do InOrder Traversal
         inOrder(root);
         System.out.println();
+
+        // to test the search method
+        if (search(root, 1)) {
+            System.out.println("Found");
+        } else {
+            System.out.println("Not Found");
+        }
 
     }
 }
