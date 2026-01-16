@@ -1,4 +1,4 @@
-public class SearchBST {
+public class DeleteBST {
     static class Node {
         int data;
         Node left;
@@ -56,6 +56,42 @@ public class SearchBST {
         }
     }
 
+    // Method to delete a node
+    public static Node delete(Node root, int val) {
+        if (root.data > val) {
+            root.left = delete(root.left, val);
+        }
+        else if (root.data < val) {
+            root.right = delete(root.right, val);
+        }
+        else { // point where we have the node to delete -> root.data == key
+            // Case 1 -> No child (leaf node)
+            if (root.right == null && root.left == null) {
+                return null;
+            }
+            // Case 2 -> Single child
+            if (root.right == null) {
+                return root.left;
+            } 
+            else if (root.left == null) {
+                return root.right;
+            }
+            // Case 3 -> both child
+            Node IS = findInorderSuccessor(root.right); // cause always right subtree contains IS.
+            root.data = IS.data;
+            root.right = delete(root.right, IS.data);
+        }
+        return root;
+    }
+
+    // to find the successor for case 3
+    public static Node findInorderSuccessor(Node root) {
+        while(root.left != null) {
+            root = root.left;
+        }
+        return root;
+    }
+
     public static void main(String[] args) {
         int values[] = {8, 5, 3, 1, 4, 6, 10, 11, 14};
         Node root = null;
@@ -74,5 +110,12 @@ public class SearchBST {
         } else {
             System.out.println("Not Found");
         }
+
+        // to test the delete method
+        root = delete(root, 6);
+        System.out.println();
+
+        inOrder(root);
+
     }
 }
