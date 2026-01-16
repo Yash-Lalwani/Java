@@ -1,4 +1,4 @@
-public class DeleteBST {
+public class PrintRange {
     static class Node {
         int data;
         Node left;
@@ -92,6 +92,27 @@ public class DeleteBST {
         return root;
     }
 
+    public static void printInRange(Node root, int k1, int k2) {
+        // base case
+        if (root == null) {
+            return;
+        }
+        // Case 1 
+        if (root.data >= k1 && root.data <= k2) {
+            printInRange(root.left, k1, k2);
+            System.out.print(root.data + " ");
+            printInRange(root.right, k1, k2);
+        }
+        // Case 2
+        else if (root.data < k1) {
+            printInRange(root.left, k1, k2);
+        }
+        // Case 3
+        else {
+            printInRange(root.right, k1, k2);
+        }
+    }
+
     public static void main(String[] args) {
         int values[] = {8, 5, 3, 1, 4, 6, 10, 11, 14};
         Node root = null;
@@ -104,10 +125,7 @@ public class DeleteBST {
         inOrder(root);
         System.out.println();
 
-        // to test the delete method
-        root = delete(root, 6);
-        System.out.println();
-
-        inOrder(root);
+        printInRange(root, 5,12);
     }
 }
+
