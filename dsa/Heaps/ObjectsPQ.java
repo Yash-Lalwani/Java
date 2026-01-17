@@ -1,5 +1,6 @@
 package Heaps;
 
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class ObjectsPQ {
@@ -18,7 +19,7 @@ public class ObjectsPQ {
         }
     }
     public static void main(String args[]) {
-        PriorityQueue<Student> pq = new PriorityQueue<>();
+        PriorityQueue<Student> pq = new PriorityQueue<>(Comparator.reverseOrder());
 
         pq.add(new Student("A", 4));
         pq.add(new Student("B", 5));
