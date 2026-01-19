@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class DFS {
+public class HasPath {
     static class Edge {
         int src;
         int dest;
@@ -44,17 +44,8 @@ public class DFS {
         graph[6].add(new Edge(6, 5, 1));
     }
 
-    // Time complexity of DFS is same as BFS which is O(V+E)
-    public static void dfs(ArrayList<Edge>[] graph, int curr, boolean vis[]) {
-        System.out.print(curr + " ");
-        vis[curr] = true;
-
-        for(int i=0; i<graph[curr].size(); i++) {
-            Edge e = graph[curr].get(i);
-            if(!vis[e.dest]) {
-                dfs(graph, e.dest, vis);
-            }
-        }
+    static void hasPath(ArrayList<Edge>[] graph, int src, int dest) {
+        
     }
 
     public static void main(String[] args) {
@@ -72,6 +63,8 @@ public class DFS {
         ArrayList<Edge> graph[] = new ArrayList[V]; // graph is an array, contains arrayList of edges
         createGraph(graph);
 
-        dfs(graph, 0, new boolean[V]);
+        int src = 0;
+        int dest = 5;
+        hasPath(graph, src, dest);
     }
 }
