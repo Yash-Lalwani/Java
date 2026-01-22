@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class KadanesAlgorithm {
     
     public static void kadanes(int arr[]) {
