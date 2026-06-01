@@ -1,6 +1,6 @@
 package LinkedList-1;
 
-public class LinkedList {
+public class LinkedListA {
     public static class Node {
         int data;
         Node next;
