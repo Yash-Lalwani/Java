@@ -1,6 +1,6 @@
 // Head & Tail in Linked List
 
-package LinkedList;
+package LinkedList-1;
 
 public class LinkedListB {
     public static class Node {
