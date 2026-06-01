@@ -1,7 +1,5 @@
 // Inserting at first in Linked List
 
-package LinkedList-1;
-
 public class LinkedListC {
     public static class Node {
         int data;
@@ -27,7 +25,7 @@ public class LinkedListC {
     }
 
     public static void main(String args[]) {
-        LinkedList ll = new LinkedList();
+        LinkedListC ll = new LinkedListC();
         ll.addFirst(1);
         ll.addFirst(2);
     }

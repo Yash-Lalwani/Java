@@ -1,7 +1,5 @@
 // Insert at the Kth position of Linked List
 
-package LinkedList-1;
-
 public class LinkedListF {
     public static class Node {
         int data;
@@ -69,7 +67,7 @@ public class LinkedListF {
     }
  
     public static void main(String args[]) {
-        LinkedList ll = new LinkedList();
+        LinkedListF ll = new LinkedListF();
         ll.addFirst(2);
         ll.addFirst(1);
         ll.addLast(3);

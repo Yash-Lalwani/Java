@@ -1,7 +1,4 @@
 // Size of a Linked List
-
-package LinkedList-1;
-
 public class LinkedListG {
     public static class Node {
         int data;
@@ -73,7 +70,7 @@ public class LinkedListG {
     }
  
     public static void main(String args[]) {
-        LinkedList ll = new LinkedList();
+        LinkedListG ll = new LinkedListG();
         ll.addFirst(2);
         ll.addFirst(1);
         ll.addLast(4);

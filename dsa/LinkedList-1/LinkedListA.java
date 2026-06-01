@@ -1,7 +1,5 @@
 // Intro To Linked List
 
-package LinkedList-1;
-
 public class LinkedListA {
     public static class Node {
         int data;

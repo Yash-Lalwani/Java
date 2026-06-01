@@ -1,7 +1,5 @@
 // Print a Linked List
 
-package LinkedList-1;
-
 public class LinkedListE {
     public static class Node {
         int data;
@@ -50,7 +48,7 @@ public class LinkedListE {
     }
  
     public static void main(String args[]) {
-        LinkedList ll = new LinkedList();
+        LinkedListE ll = new LinkedListE();
         ll.print();
         ll.addFirst(2);
         ll.print();

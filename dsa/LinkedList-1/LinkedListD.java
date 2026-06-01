@@ -1,7 +1,5 @@
 // Inserting at Tail in Linked List
 
-package LinkedList-1;
-
 public class LinkedListD {
     public static class Node {
         int data;
@@ -37,7 +35,7 @@ public class LinkedListD {
     }
 
     public static void main(String args[]) {
-        LinkedList ll = new LinkedList();
+        LinkedListD ll = new LinkedListD();
         ll.addFirst(1);
         ll.addFirst(2);
         ll.addLast(3);
