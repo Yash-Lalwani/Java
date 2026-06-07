@@ -1,3 +1,5 @@
+// Time Complexity = O(2^n)
+
 package DP_1;
 
 public class Fibonacci {
@@ -10,7 +12,7 @@ public class Fibonacci {
     }
 
     public static void main(String[] args) {
-        int n = 3;
+        int n = 5;
         System.out.println(fib(n));
     }
 }
