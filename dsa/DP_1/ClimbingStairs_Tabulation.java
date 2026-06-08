@@ -1,5 +1,6 @@
 package DP_1;
 
+// time complexity = O(n)
 public class ClimbingStairs_Tabulation {
 
     public static int countWays(int n) {
