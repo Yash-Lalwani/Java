@@ -1,3 +1,4 @@
+// Space Complexity = O(n * W)
 // Time Complexity = O(n * W)
 // becuase that's the size of 2d array, and the worst case is all cells in that would fill means that will be the most values that can be calculated for this code.
 
